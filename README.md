@@ -8,12 +8,7 @@ A data essay on how six colors came to cover **96% of new cars** sold in North A
 
 ## Screenshot
 
-<!-- Add a screenshot named screenshot.png (or update the path below).
-     A good one: the hero + the market-share "wall" section. -->
-
-![Screenshot of the Great Convergence data essay](assets/screenshot.png)
-
-> _Replace the image above: drop your screenshot at `assets/screenshot.png`, or change the path to wherever you put it._
+![Screenshot of the Great Convergence data essay](screenshots/car-analysis-screenshot.png)
 
 ---
 
