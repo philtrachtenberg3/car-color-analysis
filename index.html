@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Great Convergence — How American Cars Lost Their Color</title>
+<meta name="description" content="A data essay on how six colors came to cover 96% of new cars in North America — and why even the exceptions are the darkest versions of themselves.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+    <div class="tag"><span>A data essay · U.S. new-car color</span><span>1975 → 2025</span></div>
+    <h1>The great<br>convergence <em>·</em><br>six colors,<br>one road</h1>
+    <p class="standfirst">In 2025, just <b>six colors accounted for 96%</b> of new cars sold in North America. Four of them are grayscale. And the two that aren't — blue and red — have quietly become the <b>darkest, most restrained versions</b> of themselves. This is the story of a market that stopped choosing color.</p>
+    <div class="byline">Analysis &amp; visualization built with Claude (Anthropic).<br>Every figure sourced; every assumption logged below.</div>
+  </div>
+</div>
+
+<!-- ============ THE WALL ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow">01 — The market today</div>
+    <h2>What the whole market looks like</h2>
+    <p class="say">This bar is every new car sold in North America in 2025, sorted by color. The six blocks on the left are white, gray, black, blue, silver, and red. Everything else — green, gold, brown, yellow — is the hatched sliver on the right.</p>
+
+    <div class="wall">
+      <div class="wall-bar" id="wall"></div>
+      <div class="wall-caption">
+        <span><b>96%</b> — six colors</span>
+        <span><b>4%</b> — every other color combined</span>
+      </div>
+    </div>
+
+    <div class="bigstat">
+      <div class="unit"><div class="n" style="color:var(--gray)">79%</div><div class="l">grayscale alone<br>white · gray · black · silver</div></div>
+      <div class="unit"><div class="n" style="color:var(--navy)">96%</div><div class="l">add just blue + red<br>and the market is covered</div></div>
+      <div class="unit"><div class="n" style="color:var(--green)">4%</div><div class="l">left for the entire<br>rest of the spectrum</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE TWIST ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow">02 — The real finding</div>
+    <h2>Even the color cars are hiding</h2>
+    <p class="say">Here's the part that's easy to miss. "Blue" and "red" sound like exceptions to the grayscale rule — but look at which blues and reds people actually buy. The popular blue is navy. The popular red is deep and muted. Industry paint suppliers report that the darkest blue shades are the ones gaining ground, chosen precisely because they don't shout.</p>
+
+    <div class="twist-grid">
+      <div class="fade-card">
+        <div class="fade-swatch" style="background:var(--navy)"><span>navy · the popular blue</span></div>
+        <div class="fade-body">
+          <h3>Blue that reads as black</h3>
+          <p>Dark navy has gained traction since 2017 and is favored for premium perception and resale. It's picked for restraint — depth without attention.</p>
+        </div>
+      </div>
+      <div class="fade-card">
+        <div class="fade-swatch" style="background:var(--red)"><span>deep red · the popular red</span></div>
+        <div class="fade-body">
+          <h3>Red without the shout</h3>
+          <p>The bright muscle-car reds of the past have given way to deeper, more subdued tones — the same move toward restraint, one shade over.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lowlight-demo">
+      <div class="head"><span>The low-light test</span><span id="llstate">daylight</span></div>
+      <div class="ll-row" id="llrow">
+        <div data-day="#1d1d22" data-night="#0a0a0c"><span>black</span></div>
+        <div data-day="#1e3a5f" data-night="#0c1622"><span>navy</span></div>
+        <div data-day="#7c2d2d" data-night="#2a1010"><span>deep red</span></div>
+        <div data-day="#7c808a" data-night="#33353a"><span>gray</span></div>
+      </div>
+      <div class="ll-toggle">
+        <button id="lltoggle">dim the lights →</button>
+        <span>At dusk, the "colorful" choices collapse toward the neutrals. This is the convergence, made visible.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CROSSOVER ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow">03 — How we got here</div>
+    <h2>Grayscale went from minority to monopoly</h2>
+    <p class="say">White, black, gray, and silver were roughly a sixth of the market in the mid-1970s. They crossed the halfway line sometime in the 1990s and kept climbing. The line below is the grayscale share of the road over fifty years.</p>
+
+    <div class="chart">
+      <svg viewBox="0 0 700 330" role="img" aria-label="Grayscale share of U.S. car colors rising from roughly 17% in 1975 to 79% in 2025, crossing 50% in the 1990s.">
+        <g stroke="var(--rule)" stroke-width="1">
+          <line x1="64" y1="46" x2="686" y2="46"/>
+          <line x1="64" y1="116" x2="686" y2="116"/>
+          <line x1="64" y1="186" x2="686" y2="186"/>
+          <line x1="64" y1="256" x2="686" y2="256"/>
+        </g>
+        <line x1="64" y1="151" x2="686" y2="151" stroke="var(--red)" stroke-width="1" stroke-dasharray="4 4" opacity=".7"/>
+        <text x="68" y="146" class="cnote">50% — grayscale becomes the majority</text>
+        <text x="56" y="260" text-anchor="end" class="axis">0</text>
+        <text x="56" y="190" text-anchor="end" class="axis">33</text>
+        <text x="56" y="120" text-anchor="end" class="axis">66</text>
+        <text x="56" y="50"  text-anchor="end" class="axis">100%</text>
+        <path fill="url(#cg)" opacity=".14"
+          d="M64,220 L188,192 L312,151 L436,116 L560,100 L686,88 L686,256 L64,256 Z"/>
+        <defs><linearGradient id="cg" x1="0" x2="1"><stop offset="0" stop-color="var(--navy)"/><stop offset=".5" stop-color="var(--red)"/><stop offset="1" stop-color="var(--green)"/></linearGradient></defs>
+        <polyline id="gline" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"
+          points="64,220 188,192 312,151 436,116 560,100 686,88"/>
+        <g id="gpts"></g>
+        <text x="678" y="78" text-anchor="end" class="cnote" style="fill:var(--ink)">79%</text>
+        <g class="axis" text-anchor="middle">
+          <text x="64" y="278">1975</text><text x="188" y="278">1985</text><text x="312" y="278">1995</text>
+          <text x="436" y="278">2005</text><text x="560" y="278">2015</text><text x="686" y="278">2025</text>
+        </g>
+      </svg>
+    </div>
+    <div class="legend">
+      <span><i class="dot" style="background:var(--ink)"></i>Grayscale share (white·gray·black·silver)</span>
+      <span><i class="dot" style="background:linear-gradient(90deg,var(--navy),var(--red))"></i>Everything else</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THEN VS NOW ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow">04 — The world we left</div>
+    <h2>A 1970s car lot, for contrast</h2>
+    <p class="say">The oil crisis pushed the industry toward earth tones — avocado green, burnt orange, gold, and brown — alongside strong blues and reds. Grayscale was an afterthought. The 70s figures are approximate; the 2025 figures are exact.</p>
+
+    <div class="compare">
+      <div class="era">
+        <h3>~1970s</h3>
+        <div class="sub warn">approximate · earth-tone era</div>
+        <div class="chip"><i style="background:var(--navy)"></i>Blue <b>~18%</b></div>
+        <div class="chip"><i style="background:var(--red)"></i>Red <b>~16%</b></div>
+        <div class="chip"><i style="background:var(--green)"></i>Green <b>~11%</b></div>
+        <div class="chip"><i style="background:var(--brown)"></i>Brown <b>~10%</b></div>
+        <div class="chip"><i style="background:var(--gold)"></i>Gold / orange <b>~9%</b></div>
+        <div class="chip"><i style="background:var(--white)"></i>White <b>~9%</b></div>
+        <div class="chip"><i style="background:var(--gray)"></i>Gray / silver <b>~6%</b></div>
+        <div class="chip"><i style="background:var(--black)"></i>Black <b>~6%</b></div>
+      </div>
+      <div class="era">
+        <h3>2025</h3>
+        <div class="sub">exact · Axalta North America</div>
+        <div class="chip"><i style="background:var(--white)"></i>White <b>31%</b></div>
+        <div class="chip"><i style="background:var(--gray)"></i>Gray <b>21%</b></div>
+        <div class="chip"><i style="background:var(--black)"></i>Black <b>19%</b></div>
+        <div class="chip"><i style="background:var(--navy)"></i>Blue <b>10%</b></div>
+        <div class="chip"><i style="background:var(--silver)"></i>Silver <b>8%</b></div>
+        <div class="chip"><i style="background:var(--red)"></i>Red <b>7%</b></div>
+        <div class="chip"><i style="background:var(--green)"></i>Green <b>2%</b></div>
+        <div class="chip"><i style="background:var(--gold)"></i>Gold / brown <b>2%</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METHODOLOGY ============ -->
+<section class="section method">
+  <div class="wrap">
+    <div class="eyebrow">05 — How this was made</div>
+    <h2>Methodology &amp; assumptions</h2>
+    <p class="say">A portfolio piece is only as honest as its footnotes. Here's exactly what's solid, what's estimated, and where judgment calls were made. Tap any item to expand.</p>
+
+    <div class="assump">
+      <details open>
+        <summary><span class="num">A1</span>The 2025 numbers are exact and single-sourced</summary>
+        <div class="ans">The current breakdown comes from Axalta's 73rd annual Global Automotive Color Popularity Report (Dec 2025), North America region: white <code>31</code>, gray <code>21</code>, black <code>19</code>, blue <code>10</code>, silver <code>8</code>, red <code>7</code>, green <code>2</code>, yellow/gold <code>1</code>, brown/beige <code>1</code>. These are production/sales share figures, not registrations of cars already on the road.</div>
+      </details>
+      <details>
+        <summary><span class="num">A2</span>"96%" comes from summing the top six categories</summary>
+        <div class="ans">31 + 21 + 19 + 10 + 8 + 7 = <code>96</code>. The remaining 4% is green (2), gold (1), and brown (1). Depending on the source and year this rounds to 96–97%, which is why the takeaway is framed as "roughly the entire market."</div>
+      </details>
+      <details>
+        <summary><span class="num">A3</span>The pre-2000 history is directional, not precise</summary>
+        <div class="ans">There is no single clean public dataset of U.S. car color going back to the 1970s. The decade figures and the trend line are stitched from secondary sources (PPG and Kelley Blue Book paint histories, iSeeCars, and registration analyses). Treat the shape of the curve as reliable and the exact decade percentages as estimates. The one firm anchor: white+black+gray were "just over 25%" of cars in the 1980s and "over 50%" by the 1990s.</div>
+      </details>
+      <details>
+        <summary><span class="num">A4</span>"Even the color cars are dark" mixes data and observation</summary>
+        <div class="ans">The claim that popular blues skew navy is supported by paint-supplier reporting (darker blue shades gaining share since 2017; navy preferred for premium/resale). The parallel claim about muted reds is more of a reasoned observation than a hard dataset — bright muscle-car reds have declined, but Axalta reports a single "red" category without shade-level splits. It's logged here as an interpretation, not a measured figure.</div>
+      </details>
+      <details>
+        <summary><span class="num">A5</span>Swatch colors are representative, not official codes</summary>
+        <div class="ans">The hex values used for each swatch (e.g. navy <code>#1e3a5f</code>, deep red <code>#7c2d2d</code>) were chosen to represent each category visually. They are not tied to any specific OEM paint code. The "low-light test" darkens each swatch by a fixed amount to illustrate perceptual convergence — it's a demonstration, not a photometric measurement.</div>
+      </details>
+      <details>
+        <summary><span class="num">A6</span>Region and scope</summary>
+        <div class="ans">All modern figures are North America unless noted. Global numbers differ slightly (white leads at ~29%, and the U.S. skews more toward white and trucks). "Cars" here includes light trucks and SUVs, which is how the industry reports it.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="eyebrow">Sources</div>
+    <div class="srcs">
+      Axalta — 2025 Global Automotive Color Popularity Report (73rd ed.)<br>
+      PPG — History of Automotive Colors<br>
+      Kelley Blue Book — A History of Automotive Paint Colors<br>
+      iSeeCars — 22-million-vehicle color study<br>
+      Curbside Classic — "Fade to Gray" (NY State registration analysis)
+    </div>
+    <div class="builtnote">
+      This piece was researched, analyzed, and built with Claude (Anthropic). The analysis, framing, and assumption log are the point of the work; the AI was the instrument. Reuse freely with attribution.
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
