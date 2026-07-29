@@ -1,4 +1,4 @@
-# The Great Convergence — How American Cars Lost Their Color
+# How American Cars Lost Their Color
 
 A data essay on how six colors came to cover **96% of new cars** sold in North America in 2025 — and why even the two "colorful" exceptions, blue and red, have become the darkest, most restrained versions of themselves.
 
@@ -8,7 +8,7 @@ A data essay on how six colors came to cover **96% of new cars** sold in North A
 
 ## Screenshot
 
-![Screenshot of the Great Convergence data essay](screenshots/car-analysis-screenshot.png)
+![Screenshot of the American Car Colors data essay](screenshots/car-analysis-screenshot.png)
 
 ---
 
@@ -34,17 +34,17 @@ The original hypothesis — that modern cars have collapsed to a handful of colo
 
 ## My analysis
 
-<!-- ============================================================
-     This section is yours. Write your own take here.
-     Some prompts to get started:
-       - What surprised you most in the data?
-       - Why do you think the market converged on restraint?
-       - What does the "even the color cars are dark" finding suggest
-         about how people actually make color choices?
-       - Where would you take this next?
-     ============================================================ -->
+This was just a curiosity project and I had AI run the analysis and create the website. I was curious the extent to which the colors of our cars in the US have changed over the past half-century. It's no secret that there's a wild car dependence in the US - starting in the 1950s when the highway system was built, coinciding with the move of white people to the suburbs (where there is no public transportation), nearly all Americans need a car (unless you live in NYC or a select few cities). There's a freedom aspect to it: with a car you can go nearly anywhere at any time without needing to wait for a restrictive bus. However, this argument has somewhat turned on its head as the requirement to have a car now means you have no other real means of transportation for food and entertainment other than a car.
 
-_Your writeup goes here._
+When car culture first started - say in the 1960s/1970s, cars were also a show of personality. The brand and model mattered, people obsessed over the difference between a Ford and a Toyota (or even a Ford and a Chevy), and the different car manufacturers had markedly different vehicles.
+
+Now, not only do the different manufacturers make more-or-less the same car, the colors have been standardized to such an extent that a time traveler from the 1970s would be shocked to see the roads today. From just my own observation, I noticed that every time you see a mass of cars together (a highway, major parking lot, etc...), you see all the same colors: white, gray/silver, black, and then a dark blue and a dark red. That's it. Sparingly you'll see a dark green, but almost never a light green. Same with brown, and yellow is incredibly rare.
+
+The analysis run by Claude supports this theory to even more of a degree than I had expected. In 2025, according to KBB and Axalta, nearly 80% of cars now are a grayscale shade (black, gray, silver, white). And if you add in that dark blue and red, 96% of cars fit into those 6 colors. That's honestly even more than I would've expected, even though if you look at just about any road or parking lot, at least 9 out of every 10 cars are one of those six colors.
+
+Then if you look at the data from the 1970s (which is approximate because they weren't storing the data the same way back then), only about 20-25% of cars were grayscale. That's an unbelievable amount of growth away from creativity in 50 years. In the 1970s, blue and red were the most popular colors, but that covered a range of blues and reds (not only the predominantly dark blue and dark red which appear today). 
+
+At a time when nearly every American staple chain (ex. McDonalds, Starbucks, Taco Bell, etc...) has gone from fun and exciting layouts to drab black-and-white monotone dystopian-looking buildings, it's unsurprising that cars would follow the same trend. But the extent to which it has happened is quite shocking.
 
 ---
 
