@@ -86,9 +86,56 @@ function initLowLightToggle() {
   btn.addEventListener('click', () => { night = !night; apply(night); });
 }
 
+/* ---- 4. Scroll reveal for editorial sections ---- */
+function initScrollReveal() {
+  const sections = document.querySelectorAll('.section.reveal');
+  if (!sections.length) return;
+
+  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+    sections.forEach(s => s.classList.add('in-view'));
+    return;
+  }
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+  sections.forEach(s => io.observe(s));
+}
+
+/* ---- 5. Fixed section-index scrollspy ---- */
+function initRailSpy() {
+  const links = [...document.querySelectorAll('.rail a')];
+  if (!links.length || !('IntersectionObserver' in window)) return;
+
+  const sections = links
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+  if (!sections.length) return;
+
+  const setActive = id => {
+    links.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${id}`));
+  };
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, { threshold: 0.5, rootMargin: '-15% 0px -60% 0px' });
+
+  sections.forEach(s => io.observe(s));
+}
+
 /* ---- boot ---- */
 document.addEventListener('DOMContentLoaded', () => {
   renderWall();
   renderCrossoverPoints();
   initLowLightToggle();
+  initScrollReveal();
+  initRailSpy();
 });
