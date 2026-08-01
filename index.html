@@ -7,28 +7,48 @@
 <meta name="description" content="A data essay on how six colors came to cover 96% of new cars in North America — and why even the exceptions are the darkest versions of themselves.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- ============ HERO ============ -->
+<!-- ============ SECTION INDEX (fixed rail) ============ -->
+<nav class="rail" aria-label="Section index">
+  <a href="#sec-01">01</a>
+  <a href="#sec-02">02</a>
+  <a href="#sec-03">03</a>
+  <a href="#sec-04">04</a>
+  <a href="#sec-05">05</a>
+</nav>
+
+<!-- ============ HERO / MASTHEAD ============ -->
 <div class="hero">
-  <div class="wrap">
-    <div class="tag"><span>A data essay · U.S. new-car color</span><span>1975 → 2025</span></div>
-    <h1>How American Cars Lost Their <br>Color</br></h1>
-    <p class="standfirst">In 2025, just <b>six colors accounted for 96%</b> of new cars sold in North America. Four of them are grayscale. And the two that aren't — blue and red — have quietly become the <b>darkest, most restrained versions</b> of themselves. This is the story of a market that stopped choosing color.</p>
-    <div class="byline">Analysis &amp; visualization built with Claude (Anthropic).<br>Every figure sourced; every assumption logged below.</div>
+  <div class="wrap-wide mh-grid">
+    <div class="mh-text">
+      <div class="tag"><span>U.S. new-car colors · A data essay</span><span>1975 → 2025</span></div>
+      <h1>How American Cars<br>Lost Their Color</h1>
+      <p class="standfirst">In 2025, just <b>six colors </b>accounted for <b>96%</b> of new cars sold in North America. Four of them are grayscale. And the two that aren't — blue and red — are the <b>darkest versions</b> of themselves.</p>
+      <div class="byline">Analysis &amp; visualization built with Claude (Anthropic).<br>Every figure sourced; every assumption logged below.</div>
+    </div>
+    <div class="mh-stat" aria-hidden="true">
+      <div class="mh-num">96<span>%</span></div>
+      <div class="mh-cap">of new cars sold<br>in just six colors</div>
+    </div>
   </div>
 </div>
 
 <!-- ============ THE WALL ============ -->
-<section class="section">
-  <div class="wrap">
-    <div class="eyebrow">01 — The market today</div>
-    <h2>What the whole market looks like</h2>
-    <p class="say">This bar is every new car sold in North America in 2025, sorted by color. The six blocks on the left are white, gray, black, blue, silver, and red. Everything else — green, gold, brown, yellow — is the hatched sliver on the right.</p>
+<section class="section reveal" id="sec-01">
+  <div class="wrap head-grid">
+    <span class="rail-num" aria-hidden="true">01</span>
+    <div>
+      <div class="eyebrow">01 — The market today</div>
+      <h2>What the whole market looks like</h2>
+      <p class="say lede">This bar is every new car sold in North America in 2025, sorted by color. The six blocks on the left are white, gray, black, blue, silver, and red. Everything else — green, gold, brown, yellow — is the striped sliver on the right.</p>
+    </div>
+  </div>
 
+  <div class="wrap-wide">
     <div class="wall">
       <div class="wall-bar" id="wall"></div>
       <div class="wall-caption">
@@ -39,19 +59,24 @@
 
     <div class="bigstat">
       <div class="unit"><div class="n" style="color:var(--gray)">79%</div><div class="l">grayscale alone<br>white · gray · black · silver</div></div>
-      <div class="unit"><div class="n" style="color:var(--navy)">96%</div><div class="l">add just blue + red<br>and the market is covered</div></div>
+      <div class="unit"><div class="n" style="color:var(--navy)">96%</div><div class="l">adding blue + red<br>and the market is covered</div></div>
       <div class="unit"><div class="n" style="color:var(--green)">4%</div><div class="l">left for the entire<br>rest of the spectrum</div></div>
     </div>
   </div>
 </section>
 
 <!-- ============ THE TWIST ============ -->
-<section class="section">
-  <div class="wrap">
-    <div class="eyebrow">02 — The real finding</div>
-    <h2>Even the color cars are hiding</h2>
-    <p class="say">Here's the part that's easy to miss. "Blue" and "red" sound like exceptions to the grayscale rule — but look at which blues and reds people actually buy. The popular blue is navy. The popular red is deep and muted. Industry paint suppliers report that the darkest blue shades are the ones gaining ground, chosen precisely because they don't shout.</p>
+<section class="section reveal" id="sec-02">
+  <div class="wrap head-grid">
+    <span class="rail-num" aria-hidden="true">02</span>
+    <div>
+      <div class="eyebrow">02 — The non-grayscales</div>
+      <h2>Even the color cars are hiding</h2>
+      <p class="say">"Blue" and "red" sound like exceptions to the grayscale rule, and those were the most popular colors in the '70s. But the popular blue is navy. The popular red is a dark red. Even the colored cars are barely distinguishable from the grayscale.</p>
+    </div>
+  </div>
 
+  <div class="wrap-wide">
     <div class="twist-grid">
       <div class="fade-card">
         <div class="fade-swatch" style="background:var(--navy)"><span>navy · the popular blue</span></div>
@@ -68,6 +93,8 @@
         </div>
       </div>
     </div>
+
+    <blockquote class="pull">"Chosen precisely because they don't shout."</blockquote>
 
     <div class="lowlight-demo">
       <div class="head"><span>The low-light test</span><span id="llstate">daylight</span></div>
@@ -86,12 +113,17 @@
 </section>
 
 <!-- ============ CROSSOVER ============ -->
-<section class="section">
-  <div class="wrap">
-    <div class="eyebrow">03 — How we got here</div>
-    <h2>Grayscale went from minority to monopoly</h2>
-    <p class="say">White, black, gray, and silver were roughly a sixth of the market in the mid-1970s. They crossed the halfway line sometime in the 1990s and kept climbing. The line below is the grayscale share of the road over fifty years.</p>
+<section class="section reveal" id="sec-03">
+  <div class="wrap head-grid">
+    <span class="rail-num" aria-hidden="true">03</span>
+    <div>
+      <div class="eyebrow">03 — How we got here</div>
+      <h2>Grayscale went from minority to monopoly</h2>
+      <p class="say">White, black, gray, and silver were roughly a sixth of the market in the mid-1970s. They crossed the halfway line sometime in the 1990s and kept climbing. The line below is the grayscale share of the road over fifty years.</p>
+    </div>
+  </div>
 
+  <div class="wrap-wide">
     <div class="chart">
       <svg viewBox="0 0 700 330" role="img" aria-label="Grayscale share of U.S. car colors rising from roughly 17% in 1975 to 79% in 2025, crossing 50% in the 1990s.">
         <g stroke="var(--rule)" stroke-width="1">
@@ -127,12 +159,17 @@
 </section>
 
 <!-- ============ THEN VS NOW ============ -->
-<section class="section">
-  <div class="wrap">
-    <div class="eyebrow">04 — The world we left</div>
-    <h2>A 1970s car lot, for contrast</h2>
-    <p class="say">The oil crisis pushed the industry toward earth tones — avocado green, burnt orange, gold, and brown — alongside strong blues and reds. Grayscale was an afterthought. The 70s figures are approximate; the 2025 figures are exact.</p>
+<section class="section reveal" id="sec-04">
+  <div class="wrap head-grid">
+    <span class="rail-num" aria-hidden="true">04</span>
+    <div>
+      <div class="eyebrow">04 — The previous world</div>
+      <h2>A 1970s car lot, for contrast</h2>
+      <p class="say">The oil crisis pushed the industry toward earth tones — avocado green, burnt orange, gold, and brown — alongside strong blues and reds. Grayscale was an afterthought. The 70s figures are approximate; the 2025 figures are exact.</p>
+    </div>
+  </div>
 
+  <div class="wrap-wide">
     <div class="compare">
       <div class="era">
         <h3>~1970s</h3>
@@ -163,12 +200,17 @@
 </section>
 
 <!-- ============ METHODOLOGY ============ -->
-<section class="section method">
-  <div class="wrap">
-    <div class="eyebrow">05 — How this was made</div>
-    <h2>Methodology &amp; assumptions</h2>
-    <p class="say">A portfolio piece is only as honest as its footnotes. Here's exactly what's solid, what's estimated, and where judgment calls were made. Tap any item to expand.</p>
+<section class="section reveal method" id="sec-05">
+  <div class="wrap head-grid">
+    <span class="rail-num" aria-hidden="true">05</span>
+    <div>
+      <div class="eyebrow">05 — How this was made</div>
+      <h2>Methodology &amp; assumptions</h2>
+      <p class="say">A portfolio piece is only as honest as its footnotes. Here's exactly what's solid, what's estimated, and where judgment calls were made. Tap any item to expand.</p>
+    </div>
+  </div>
 
+  <div class="wrap">
     <div class="assump">
       <details open>
         <summary><span class="num">A1</span>The 2025 numbers are exact and single-sourced</summary>
@@ -210,7 +252,7 @@
       Curbside Classic — "Fade to Gray" (NY State registration analysis)
     </div>
     <div class="builtnote">
-      This piece was researched, analyzed, and built with Claude (Anthropic). The analysis, framing, and assumption log are the point of the work; the AI was the instrument. Reuse freely with attribution.
+      This piece was researched, analyzed, and built with Claude (Anthropic). The analysis, framing, and assumption log are the point of the work; the AI was the instrument. My analysis is in the README on my GitHub. Reuse freely with attribution.
     </div>
   </div>
 </footer>
